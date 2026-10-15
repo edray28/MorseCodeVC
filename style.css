@@ -1,0 +1,50 @@
+:root{--bg:#e3ecee;--panel:#f6f9f8;--ink:#10263a;--mute:#51677a;--accent:#0b4f8a;--onaccent:#ffffff;--line:#b9c9d0;--good:#1f7a45;--bad:#b3261e;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1c2b;--panel:#162a3d;--ink:#e8eef2;--mute:#8aa0b2;--accent:#f2c230;--onaccent:#0e1c2b;--line:#284259;--good:#5fd08a;--bad:#ff7b72;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e1c2b;--panel:#162a3d;--ink:#e8eef2;--mute:#8aa0b2;--accent:#f2c230;--onaccent:#0e1c2b;--line:#284259;--good:#5fd08a;--bad:#ff7b72;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px;color:var(--ink);font:18px/1.45 "Barlow Semi Condensed","Segoe UI",system-ui,sans-serif}
+main{max-width:680px;margin:0 auto;padding:22px 14px 48px}
+h1{font-size:2.2rem;font-weight:700;margin:0;line-height:1.1}
+.sub{color:var(--mute);margin:.2rem 0 1.2rem}
+.card{background:var(--panel);border:2px solid var(--ink);border-radius:4px;padding:16px;margin-bottom:14px}
+label{display:block;color:var(--mute);margin:14px 0 4px}
+label b{color:var(--ink)}
+select,input[type=range]{width:100%}
+select{font:inherit;padding:8px;background:var(--bg);color:var(--ink);border:2px solid var(--line);border-radius:4px}
+input[type=range]{accent-color:var(--accent)}
+.chk{display:flex;gap:8px;align-items:center;color:var(--ink)}
+button{font:inherit;font-weight:600;cursor:pointer;border:2px solid var(--ink);background:var(--panel);color:var(--ink);border-radius:4px;padding:9px 14px}
+button:hover{border-color:var(--accent)}
+button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.seg{display:flex;gap:8px}.seg button{flex:1}
+.seg button.on,.primary{background:var(--accent);color:var(--onaccent);border-color:var(--accent)}
+.primary{width:100%;padding:14px;margin-top:18px;font-size:1.1rem}
+.note{color:var(--mute);font-size:.95rem;margin:12px 0 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;text-align:center}
+.stats b{display:block;font-size:1.6rem;line-height:1.1}
+.stats span{color:var(--mute);font-size:.9rem}
+.bar{height:6px;background:var(--line);margin:12px 0 0}
+.bar div{height:100%;width:0;background:var(--accent);transition:width .3s}
+.stage{text-align:center;padding:18px 0 8px}
+.lamp{width:56px;height:56px;border-radius:50%;border:3px solid var(--ink);margin:0 auto 10px}
+.lamp.on{background:var(--accent);border-color:var(--accent);box-shadow:0 0 32px var(--accent)}
+.big{font-size:6.5rem;font-weight:700;line-height:1;min-height:6.5rem}
+.pat{height:26px;display:flex;justify-content:center;align-items:center;gap:8px;margin-top:8px}
+.pat i{display:block;height:12px;border-radius:6px;background:var(--ink)}
+.mine i{background:var(--accent)}
+.dit{width:12px}.dah{width:38px}
+.fb{min-height:1.6em;font-weight:700;font-size:1.2rem;margin-top:8px}
+.good{color:var(--good)}.bad{color:var(--bad)}
+.pad{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-top:8px}
+.pad button{min-width:46px;padding:10px 0;font-size:1.15rem}
+.row{text-align:center;margin:14px 0 0}
+.key{width:100%;padding:34px 10px;font-size:1.2rem;margin-top:10px;touch-action:none;user-select:none;-webkit-user-select:none}
+.key.down{background:var(--accent);color:var(--onaccent);border-color:var(--accent)}
+.end{text-align:center;padding-top:10px}.end h2{margin:0 0 4px;font-size:1.8rem}.end .primary{margin-top:12px}
+summary{cursor:pointer;font-weight:600}
+.chart{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:6px;margin-top:12px}
+.chart button{display:flex;justify-content:space-between;padding:6px 10px;font-weight:400}
+.chart b{font-weight:700}
+@media (prefers-reduced-motion:reduce){.bar div{transition:none}}
